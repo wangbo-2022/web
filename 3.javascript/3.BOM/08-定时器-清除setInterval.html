@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.addEventListener('load',function(){
+            var start = document.querySelector('.start');
+            var stop = document.querySelector('.stop');
+
+            var timer = null;
+
+            var i = 0;
+            start.addEventListener('click',function(){
+                timer = setInterval(function(){
+                    console.log(i);
+                    i++;
+                }, 1000);
+            })
+
+            stop.addEventListener('click',function(){
+                clearInterval(timer);
+            })
+            
+        })
+    </script>
+    <button class="start">开启定时器</button>
+    <button class="stop">停止定时器</button>
+</body>
+</html>

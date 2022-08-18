@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 300px;
+            height: 100px;
+            text-align: center;
+        }
+        thead{
+            background-color: skyblue;
+        }
+        td{
+            border: 1px solid #aaa;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>商品</td>
+                <td>价钱</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>苹果</td>
+                <td>3块</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>香蕉</td>
+                <td>4块</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>葡萄</td>
+                <td>5块</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>西瓜</td>
+                <td>6块</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var selall = document.querySelector('thead').getElementsByTagName('input');
+        var sels = document.querySelector('tbody').getElementsByTagName('input');
+
+        selall[0].onclick = function(){
+            for(var i=0;i<sels.length;i++){
+                sels[i].checked = this.checked;
+            }
+        }
+        
+        for(var j=0;j<sels.length;j++){
+            sels[j].onclick = function(){
+                var flag = true;
+                for(var k=0;k<sels.length;k++){
+                        if(!sels[k].checked){
+                            flag = false;
+                            break;
+                        }
+                }
+                selall[0].checked = flag;
+            }
+        }
+    </script>
+</body>
+</html>

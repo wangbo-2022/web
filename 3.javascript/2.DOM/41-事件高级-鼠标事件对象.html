@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('click',function(event){
+            // 获取鼠标在可视区的xy坐标
+            console.log(event.clientX);
+            console.log(event.clientY);
+            console.log('--------------------------------------');
+            // 获取鼠标在浏览器页面的xy坐标
+            console.log(event.pageX);
+            console.log(event.pageY);
+            console.log('--------------------------------------');
+            // 获取鼠标在屏幕的xy坐标
+            console.log(event.screenX);
+            console.log(event.screenY);
+            console.log('--------------------------------------');
+        })
+    </script>
+</body>
+</html>

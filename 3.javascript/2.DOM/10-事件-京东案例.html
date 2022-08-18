@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            margin: 0 auto;
+            width: 800px;
+            height: 50px;
+            line-height: 50px;
+            background-color: pink;
+        }
+        div input{
+            width: 700px;
+            height: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="password" id="pwd">
+        <button id="btn">显示密码</button>
+    </div>
+    <script>
+        var pwd = document.getElementById('pwd');
+        var btn = document.getElementById('btn');
+
+        var flag = true;
+        btn.onclick = function(){
+            if(flag){
+                pwd.type = 'text';
+                flag = false;
+                btn.innerHTML = '隐藏密码';
+            }
+            else{
+                pwd.type = 'password';
+                flag = true;
+                btn.innerHTML = '显示密码';
+            }
+            
+        }
+    </script>
+</body>
+</html>

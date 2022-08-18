@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /* 解决方法一 */
+            /* border: 1px solid #000;; */
+            /* 解决方法二 */
+            /* overflow: hidden; */
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            /* 外边距塌陷 场景：相互嵌套的块级元素*/
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">son</div>
+    </div>
+</body>
+</html>

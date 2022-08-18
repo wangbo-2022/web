@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 预解析：js引擎会把所有的变量声明（变量赋值不提升）和函数声明提升到作用域的最前面
+        // 1.报错
+        // console.log(num);
+        // 2.undefined
+        // console.log(num);
+        // var num = 1;
+        // 3.正常执行
+        fn();
+        function fn(){
+            console.log('aaa');
+        }
+        // 4.报错
+        // fn();
+        // var fn = function(){
+        //     console.log('aaa');
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

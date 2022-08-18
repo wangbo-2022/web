@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 50px 400px;
+        }
+        /* .box .mesg  字体无法更新*/
+        .mesg{
+            font-size: 12px;
+            color: #999;
+        }
+        .wrong{
+            font-size: 12px;
+            color: red;
+        }
+        .right{
+            font-size: 12px;
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="password">
+        <span class="mesg">请输入6-16位密码</span>
+    </div>
+    <script>
+        var pwd = document.querySelector('input');
+        var msg = document.querySelector('.mesg');
+
+        pwd.onfocus = function(){
+            // pwd.value 
+        }
+        pwd.onblur = function(){
+            if(this.value.length<6){
+                msg.innerHTML = '密码太短';
+                msg.className = 'mesg wrong';
+            }
+            else if(this.value.length>16){
+                msg.innerHTML = '密码太长';
+                msg.className = 'mesg wrong';
+            }
+            else{
+                msg.innerHTML = '密码可用';
+                msg.className = 'mesg right';
+            }
+        }
+    </script>
+</body>
+</html>

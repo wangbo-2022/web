@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* li{
+            list-style: none;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 通过标签名获取元素 返回元素对象组成的伪数组-->
+    <ul>
+        <li>标签名获取元素</li>
+        <li>标签名获取元素1</li>
+    </ul>
+    <ol>
+        <li>标签名获取元素2</li>
+        <li>标签名获取元素3</li>
+    </ol>
+    <script>
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(lis[0]);
+        // 获取ol中的li
+        var ol = document.getElementsByTagName('ol');
+        console.log(ol);
+        var lis = ol[0].getElementsByTagName('li');
+        console.log(lis);
+    </script>
+</body>
+</html>

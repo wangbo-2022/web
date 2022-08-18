@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            margin: 0 auto;
+            width: 800px;
+            /* height: 300px; */
+            background-color: pink;
+        }
+        .bottom{
+            height: 100px;
+            background-color: skyblue;
+        }
+        .top .left{
+            float: left;
+
+            width: 200px;
+            height: 300px;
+            background-color: red;
+        }
+        .top .right{
+            float: right;
+
+            width: 580px;
+            height: 300px;
+            background-color: blue;
+        }
+        /* 单伪元素清楚 */
+        .clearfix::after{
+            content: '';
+            /* 伪元素是行内元素 要求是块元素 */
+            display: block;
+            clear:both;
+            /* 为了兼容性 */
+            height: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="top clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>

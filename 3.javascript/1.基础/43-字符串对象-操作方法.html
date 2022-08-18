@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 拼接
+        var str = 'abc';
+        str = str.concat('def');
+        console.log(str);
+        // 截取
+        console.log(str.substr(2,2));
+        // 替换
+        var str = 'abcdabcd';
+        console.log(str.replace('a','*'));  //只替换第一个
+        while(str.indexOf('a')!==-1){
+            str = str.replace('a','-');
+        }
+        console.log(str);
+        // 转换为数组
+        var str = 'a b c d';
+        console.log(str.split(' '));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

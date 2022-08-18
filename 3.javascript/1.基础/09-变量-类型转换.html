@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 转为字符串
+        var num = 10;
+        // 1.变量.toString
+        console.log(typeof num.toString());
+        // 2.String(变量)
+        console.log(typeof String(num));
+        // 3.拼接+
+        console.log(typeof (num+''));
+
+        // 转为数字型
+        // 1.转为整型parseInt(变量)
+        console.log(parseInt('3.14'));
+        console.log(parseInt('123abc'))
+        console.log(parseInt('abc123'));
+        // 2.转为浮点型parseFloat(变量)
+        console.log(parseFloat('3.14'));
+        console.log(parseFloat('3.14abc'));
+        console.log(parseFloat('abc3.14abc'));
+        // 3.Number(变量)
+        console.log(Number('12'));
+        console.log(Number('12.3'));
+        // 隐式转换 - * /
+        console.log('12'-0);
+        console.log('12'-'10');
+        console.log('12'*1);
+        console.log('12'*'2');
+        console.log('12'/1);
+        console.log('12'/'2');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

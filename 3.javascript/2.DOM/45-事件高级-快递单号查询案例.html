@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 30px;
+            border: 1px solid #000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <input type="text" placeholder="请输入快递单号">
+    <script>
+        var div = document.querySelector('div');
+        var input = document.querySelector('input');
+
+        input.addEventListener('keyup',function(event){
+            if(this.value == ''){
+                div.style.display = 'none';
+            }
+            else{
+                div.style.display = 'block';
+                div.innerHTML = this.value;
+            }
+        })
+        
+        input.onfocus = function(){
+            if(this.value !== ''){
+                div.style.display = 'block';
+            }
+        }
+        input.onblur = function(){
+            div.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

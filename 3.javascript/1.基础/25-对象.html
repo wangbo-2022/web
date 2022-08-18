@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.字面量创建对象
+        var master = {
+            uname: '张三丰',
+            age:100,
+            height:168,
+            gongfu:function(){
+                console.log('太极拳');
+            }
+        }
+        console.log(master.uname);
+        console.log(master['age']);
+        master.gongfu();
+
+        // 2.new object 创建对象
+        var dog = new Object();
+        dog.uname = '小白';
+        dog.age = 3;
+        dog.color = 'white';
+        dog.bark = function(){
+            console.log('汪汪汪');
+        }
+        console.log(dog.uname);
+        console.log(dog['color']);
+        dog.bark();
+
+        // 3.构造函数 创造对象 可以一次创建多个类似的对象
+        // 构造函数相当于类 对象相当于实例
+        function Star(uname, age, sex){
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(song){
+                console.log(song);
+            }
+        }
+        var ldh = new Star('刘德华',18,'男');
+        console.log(typeof ldh);
+        console.log(ldh.uname);
+        console.log(ldh['age']);
+        ldh.sing('冰雨');
+
+        // 遍历对象
+        var obj = {
+            uname:'xiaobai',
+            age:3,
+            color:'white',
+            bark:function(){
+                console.log('汪汪汪');
+            }
+        }
+        for (var k in obj){
+            console.log(k);
+            console.log(obj[k]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

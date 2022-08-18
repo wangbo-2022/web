@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.addEventListener('load',function(){
+            var send = document.querySelector('button');
+
+            var timer = null;
+            send.addEventListener('click',function(){
+                var s = 5;
+
+                this.innerHTML = '还剩'+s+'s再次点击';
+                this.disabled = true;
+
+                timer = setInterval(function(){
+                    if(s>0){
+                        s -= 1;
+                        send.innerHTML = '还剩'+s+'s再次点击';
+                    }
+                    else{
+                        clearInterval(timer);
+                        send.innerHTML = '发送';
+                        send.disabled = false;
+                    }
+                },1000)
+            })
+        })
+    </script>
+    <input type="text" placeholder="请输入内容">
+    <button>发送</button>
+</body>
+</html>

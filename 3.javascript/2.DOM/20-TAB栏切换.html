@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 双伪元素清除 */
+        /* 解决外边距塌陷问题 */
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+        }
+        /* 真正清除动作 */
+        .clearfix::after{
+            clear:both;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .table{
+            width: 400px;
+            margin: 100px auto;
+            background-color: skyblue;
+        }
+        li{
+            float: left;
+            list-style: none;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #eee;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            text-align: center;
+
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .content div{
+            height: 50px;
+            font-size: 14px;
+        }
+        .list .current{
+            background-color: red;
+            color: #fff;
+        }
+        .content div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="list">
+            <ul class="clearfix">
+                <li class="current">商品介绍1</li>
+                <li>商品介绍2</li>
+                <li>商品介绍3</li>
+                <li>商品介绍4</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div style="display:block">商品介绍模块1</div>
+            <div>商品介绍模块2</div>
+            <div>商品介绍模块3</div>
+            <div>商品介绍模块4</div>
+        </div>
+    </div>
+    <script>
+        var lis = document.getElementsByTagName('li');
+        var divs = document.querySelector('.content').getElementsByTagName('div');
+
+        for(var i=0;i<lis.length;i++){
+            lis[i].setAttribute('index',i);
+            lis[i].onclick = function(){
+                for(var j=0;j<lis.length;j++){
+                    lis[j].removeAttribute('class');
+                    divs[j].style = 'display:none'
+                }
+                this.className = 'current';
+                var index = this.getAttribute('index');
+                console.log(index);
+                divs[index].style = 'display:block';
+                
+            }
+        }
+    </script>
+</body>
+</html>

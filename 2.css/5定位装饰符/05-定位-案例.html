@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner{
+            position: relative;
+            margin: 0 auto;
+            width: 1200px;
+            height: 420px;
+        }
+        .abs{
+            position: absolute;
+            bottom: 0;
+            /* 绝对定位盒子是行内块模式
+            如果没有宽度也没有内容，盒子宽度就是0
+            宽度必须加 */
+            /* width: 1200px; */
+            width: 100%;
+            height: 120px;
+            background-color: rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="./images/bannar_03.png" alt="">
+        <div class="abs"></div>
+    </div>
+</body>
+</html>

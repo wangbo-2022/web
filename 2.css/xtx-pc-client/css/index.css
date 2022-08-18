@@ -1,0 +1,202 @@
+.banner{
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.banner .wrapper{
+    position: relative;
+    height: 500px;
+}
+.banner .aside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0,0,0,0.8);
+}
+.banner .aside li{
+    height: 50px;
+    line-height: 50px;
+}
+.banner .aside li a{
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    padding-right: 20px;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+}
+.banner .aside li a::after{
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    content: '';
+    width: 6px;
+    height: 11px;
+
+    background-image: url(../images/sprites.png);
+    background-position: -80px -110px;
+
+}
+.banner .aside li a:hover{
+    background-color: #27ba9b;
+}
+.banner .aside li a span{
+    margin-left: 15px;
+    font-size: 14px;
+}
+.prev,
+.next{
+    position: absolute;
+    top: 250px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.3);
+    background-image: url(../images/sprites.png);
+}
+
+.banner .prev{
+    left: 260px;
+    background-position: 14px -60px;
+}
+.banner .next{
+    right: 10px;
+    background-position: -23px -60px;
+}
+.banner ol{
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+    /* width: 100px; */
+    height: 10px;
+}
+.banner ol li{
+    float: left;
+    margin-left: 24px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+.banner ol .current{
+    background-color: #fff;
+}
+.goods .hd{
+    height: 114px;
+    line-height: 114px;
+}
+.goods .hd h2{
+    float: left;
+    height: 114px;
+    font-size: 29px;
+    font-weight: 400;
+}
+.goods .hd h2 span{
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+.goods .hd a{
+    float: right;
+    color: #999;
+}
+.goods .bd li{
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 404px;
+    background-color: #f0f9f4;
+
+    text-align: center;
+    font-size: 20px;
+}
+.goods .bd li:last-child{
+    margin-right: 0;
+}
+.goods .bd li a img{
+    width: 304px;
+}
+.goods .bd li a p{
+    margin-top: 10px;
+    color: #9a2e1f;
+}
+.goods .bd li::after{
+    content: '新品';
+    position: absolute;
+    left: 18px;
+    top: 18px;
+
+    border: 2px solid #27ba9b;
+    border-radius: 5px;
+    width: 26px;
+    height: 50px;
+
+    font-size: 18px;
+    color: #27ba9b;
+    line-height: 24px;
+}
+.fresh .hd{
+    height: 104px;
+    
+    line-height: 104px;
+}
+.fresh h2{
+    float: left;
+    font-size: 32px;
+    font-weight: normal;
+}
+.fresh .hd span{
+    position: relative;
+    float: right;
+    margin-left: 90px;
+    margin-right: 10px;
+}
+.fresh .hd span a::after{
+    position: absolute;
+    top: 45px;
+    content: '';
+    width: 7px;
+    height: 14px;
+    /* background-color: pink; */
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+}
+.fresh .hd li{
+    float: right;
+    
+}
+.fresh .hd li a{
+    padding: 10px;
+    margin: 0 5px;
+}
+.fresh .hd li a:hover{
+    background-color: #27ba9b;
+}
+.fresh .bd{
+    height: 610px;
+}
+.fresh .bd .left{
+    float: left;
+    width: 240px;
+    margin-right: 60px;
+}
+.fresh .bd .right li{
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    width: 205px;
+    height: 285px;
+}
+.fresh .bd .right li img{
+    width: 200px;
+}
+.fresh .bd .right li:hover{
+    border: 2px solid #000;
+}
+.fresh .bd .right li .name,.desc{
+    margin-left: 10px;
+}

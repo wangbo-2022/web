@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="first">1</div>
+        <span>2</span>
+        <div>3</div>
+    </div>
+    <script>
+        var span = document.querySelector('span');
+        // 1.返回上一个或下一个节点 包含文本节点
+        console.log(span.nextSibling);
+        console.log(span.previousSibling);
+        // 2.返回上一个或下一个元素节点
+        console.log(span.nextElementSibling);
+        console.log(span.previousElementSibling);
+
+        // 没有则返回null
+        var div1 = document.querySelector('.first');
+        console.log(div1.previousElementSibling);
+    </script>
+</body>
+</html>

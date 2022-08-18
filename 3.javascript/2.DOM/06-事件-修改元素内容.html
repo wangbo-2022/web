@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>显示当前时间</button>
+    <div>当前时间</div>
+    <p>当前时间</p>
+    <script>
+        // 1.获取元素
+        var btn = document.getElementsByTagName('button');
+        var div = document.querySelector('div');
+        // 2.注册事件
+        // btn.onclick
+        // 3.处理程序
+        btn[0].onclick = function(){
+            div.innerText = getTime();
+        }
+        function getTime(){
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth()+1;
+            var dates = date.getDate();
+            var day = date.getDay();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            
+            var week = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'];
+
+            h = h>9?h:'0'+h;
+            m = m>9?m:'0'+m;
+            s = s>9?s:'0'+s;
+
+            return year+'年'+month+'月'+dates+'日'+week[day]+h+':'+m+':'+s;
+        }
+
+        // 可以不注册事件 直接执行处理程序
+        var p = document.querySelector('p');
+        p.innerText = getTime();
+    </script>
+</body>
+</html>

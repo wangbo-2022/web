@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .nav{
+            margin: 50px auto;
+            width: 450px;
+        }
+        .nav1,.nav2,.nav3{
+            float: left;
+        }
+        a{
+            display: block;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            background-color: skyblue;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+        }
+        .nav ul{
+            display: none;
+        }
+        .nav1 li{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+        }
+        .nav2 li{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+        }
+        .nav3 li{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav1">
+            <a href="#">微博</a>
+            <ul>
+                <li>微博1</li>
+                <li>微博2</li>
+                <li>微博3</li>
+            </ul>
+        </li>
+        <li class="nav2">
+            <a href="#">博客</a>
+            <ul>
+                <li>博客1</li>
+                <li>博客2</li>
+                <li>博客3</li>
+            </ul>
+        </li>
+        <li class="nav3">
+            <a href="#">邮箱</a>
+            <ul>
+                <li>邮箱1</li>
+                <li>邮箱2</li>
+                <li>邮箱3</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        var nav = document.querySelector('.nav');
+        var lis = nav.children;
+        for(var i=0;i<lis.length;i++){
+            lis[i].onmousemove = function(){
+                this.children[1].style.display = 'block';
+                console.log(1);
+            }
+            lis[i].onmouseout = function(){
+                this.children[1].style.display = 'none';
+                console.log(2);
+            }
+        }
+    </script>
+</body>
+</html>

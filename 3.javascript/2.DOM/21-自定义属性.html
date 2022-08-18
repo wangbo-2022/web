@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        // 添加自定义属性 data-
+        div.setAttribute('data-index',1);
+        // h5新增
+        div.dataset.index1 = 2;
+        div.dataset['index2'] = 3;
+
+        // 读取自定义属性
+        console.log(div.dataset);
+        console.log(div.getAttribute('data-index'));
+        console.log(div.dataset.index1);
+        console.log(div.dataset['index2']);
+
+        // 自定义属性有多个-连接，获取属性需要采用驼峰命名法
+        div.setAttribute('data-time-index',4);
+        console.log(div.dataset.timeIndex);
+        console.log(div.dataset['timeIndex']);
+    </script>
+</body>
+</html>

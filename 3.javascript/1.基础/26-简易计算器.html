@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function jia(num1,num2){
+            return num1+num2;
+        }
+        function jian(num1,num2){
+            return num1-num2;
+        }
+        function cheng(num1,num2){
+            return num1*num2;
+        }
+        function chu(num1,num2){
+            return num1/num2;
+        }
+        function calc(){
+            var sel,num1,num2,result;
+            while(true){
+                sel = prompt('欢迎使用加以计算器\n1.加法运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出\n请输入您的选项');
+                switch(sel){
+                    case '1':
+                        num1 = prompt('加法运算\n请输入第一个数');
+                        num2 = prompt('加法运算\n请输入第二个数');
+                        result = jia(num1,num2);
+                        break;
+                    case '2':
+                        num1 = prompt('减法运算\n请输入第一个数');
+                        num2 = prompt('减法运算\n请输入第二个数');
+                        result = jian(num1,num2);
+                        break;
+                    case '3':
+                        num1 = prompt('乘法运算\n请输入第一个数');
+                        num2 = prompt('乘法运算\n请输入第二个数');
+                        result = cheng(num1,num2);
+                        break;
+                    case '4':
+                        num1 = prompt('除法运算\n请输入第一个数');
+                        num2 = prompt('除法运算\n请输入第二个数');
+                        result = chu(num1,num2);
+                        break;
+                    case '5':
+                        return;
+                }
+                alert('结果是：'+result);
+            }
+        }
+        calc();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

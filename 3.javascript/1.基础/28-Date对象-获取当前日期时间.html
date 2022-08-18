@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gettime(){
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth()+1;
+            var dates = date.getDate();
+            var day = date.getDay();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            
+            var week = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六'];
+
+            h = h>9?h:'0'+h;
+            m = m>9?m:'0'+m;
+            s = s>9?s:'0'+s;
+
+            return year+'年'+month+'月'+dates+'日'+week[day]+h+':'+m+':'+s;
+        }
+        console.log(gettime());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

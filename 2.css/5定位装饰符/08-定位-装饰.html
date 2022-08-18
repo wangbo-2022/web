@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 行内和行内块标签都当作文字处理，默认基线对齐 */
+        /* 较大那个 */
+        .one img{
+            vertical-align: middle;
+        }
+        .two {
+            margin-top: 10px;
+            
+        }
+        .two input{
+            box-sizing: border-box;
+
+            vertical-align: middle;
+
+            height: 50px;
+        }
+        .two button{
+            height: 50px;
+            vertical-align: middle;
+        }
+        .three{
+            margin-top: 10px;
+
+            width: 200px;
+            height: 200px;
+            background-color: pink; 
+        }
+        .three input{
+            vertical-align: top;
+        }
+        .four{
+            width: 250px;
+            background-color: skyblue;
+        }
+        .four img{
+            /* 块元素不存在对齐问题 */
+            /* display: block; */
+            vertical-align: middle;
+        }
+        .five{
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+
+            /* 配合使用不能缺少 */
+            line-height: 300px;
+            text-align: center;
+        }
+        .five img{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <img src="./images/icon1.png" alt="">
+        文字文字文字文字文字
+    </div>
+    <div class="two">
+        <input type="text"><button>按钮</button>
+    </div>
+    <div class="three">
+        <input type="text">
+    </div>
+    <div class="four">
+        <img src="./images/icon1.png" alt="">
+    </div>
+    <div class="five">
+        <img src="./images/icon1.png" alt="">
+    </div>
+</body>
+</html>

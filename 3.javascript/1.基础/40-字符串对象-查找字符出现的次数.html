@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'abcdabcd';
+        var index = 0;
+        var i = 0;
+        var arr = [];
+
+        index = str.indexOf('b');
+        while(index!==-1){
+            arr.push(index);
+            index = str.indexOf('b',index+1);
+            i++;
+        }
+        console.log(i);
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 逻辑中断(短路运算) 如果返回表达式1 怎会中断后面表达式的运算
+        // 逻辑与短路运算 表达式1为真则返回表达式2 表达式1为假则返回表达式1 
+        console.log(123 && 456);
+        console.log(0 && 456);
+        console.log( 123 && 0 && 456);
+        // 逻辑或短路运算 表达式1为真则返回表达式1 表达式1为假则返回表达式2
+        console.log(123 || 456);
+        console.log(0 ||456);
+        console.log(0 || 123 || 456);
+        // 表达式1为真 会中断表达式2的运算
+        var num = 0;
+        console.log( 123 || num++);
+        console.log(num);
+        var num = 1;
+        console.log(0 && num++);
+        console.log(num);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 这个属性是行内式 所以比css里的属性权重高，覆盖掉了css的属性
+        var div = document.querySelector('div');
+        div.onclick = function(){
+            this.style.backgroundColor = 'purple';
+            this.style.width = '400px';
+        }
+    </script>
+</body>
+</html>

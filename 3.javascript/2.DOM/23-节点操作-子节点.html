@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        // childNodes 返回所有的节点 包括元素节点:nodetype=1 属性节点:nodetype=2 文本节点:nodetype=3
+        console.log(ul.childNodes);
+        console.log(ul.childNodes[0].nodeType);
+        console.log(ul.childNodes[1].nodeType);
+
+        // children 返回所有的元素节点
+        console.log(ul.children);
+
+        // firstChild 返回第一个子节点 包括文本节点
+        console.log(ul.firstChild);
+        // firstElementChild 返回第一个子元素节点 存在兼容性问题
+        console.log(ul.firstElementChild);
+        // 实际开发写法
+        console.log(ul.children[0]);
+        console.log(ul.children[ul.children.length-1]);
+    </script>
+</body>
+</html>

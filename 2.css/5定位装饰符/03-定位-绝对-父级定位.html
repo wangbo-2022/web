@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 子绝父相：父级一般选相对位置，子级选绝对位置
+        绝对位置是从里往外一层层找，直到找到浏览器窗口（body） */
+        .father{
+            position: relative;
+
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        .son{
+            /* position: relative; */
+
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+        .sun{
+            position: absolute;
+            right: 20px;
+            bottom: 50px;
+
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+            <div class="sun">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

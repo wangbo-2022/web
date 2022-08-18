@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getSum(num1,num2){
+            console.log(num1+num2);
+        }
+        // 实参个数等于形参个数
+        getSum(1,2);
+        // 实参个数大于形参个数
+        getSum(4,2,3);
+        // 实参个数小于形参个数
+        getSum(1);
+
+        function getArr(arr){
+            arr[0] = arr[1];
+        }
+        var arr = [1,2,3]
+        getArr(arr);
+        console.log(arr);
+
+        function getMax(){
+            var max = arguments[0];
+            for(var i=1;i<arguments.length;i++){
+            
+                if(arguments[i]>max){
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        console.log(getMax(2,6,2,7,4));
+
+        // 函数表达式声明函数
+        var fun = function(){
+            console.log('hello');
+        }
+        fun();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

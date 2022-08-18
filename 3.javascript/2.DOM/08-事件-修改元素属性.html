@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button>
+    <br>
+    <img src="./images/刘德华.jpg" alt="" title="刘德华">
+    <script>
+        // 1.获取元素
+        var btn1 = document.getElementById('ldh');
+        var btn2 = document.getElementById('zxy');
+        var img = document.querySelector('img');
+        // 2.注册事件
+        // btn1.onclick
+        // btn2.onclick
+        // 3.处理程序
+        btn1.onclick = function(){
+            img.src="./images/刘德华.jpg";
+            img.title='刘德华；'
+        }
+        btn2.onclick = function(){
+            img.src="./images/张学友.jpg";
+            img.title='张学友'
+        }
+    </script>
+</body>
+</html>
